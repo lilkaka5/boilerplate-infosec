@@ -1,5 +1,15 @@
+/* This should be the top of your myApp.js file */
 const express = require('express');
+const helmet = require('helmet'); // <-- 1. ADD THIS LINE to import Helmet.
+
 const app = express();
+
+// ... a lot of other code from the boilerplate might be here ...
+
+// 2. ADD THIS LINE. It's best practice to place it high up.
+// This tells your Express app to use Helmet's default security headers.
+app.use(helmet());
+
 
 
 
